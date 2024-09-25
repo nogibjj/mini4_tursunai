@@ -1,17 +1,11 @@
-"""
-Test goes here
-
-"""
-
-from main import listmax
+from main import guess_the_number
 
 
-def test_max():
-    """Function calling listMax"""
+def test_guess_correct(monkeypatch):
+    monkeypatch.setattr("random.randint", lambda a, b: 5)
+    assert guess_the_number(5) == "You guessed it!"
 
-    list1 = [77, 33, 19, 99, 42, 6, 27, 4]
-    list2 = [-3, -42, -99, -1000, -999, -88, -77]
-    list3 = [425, 59, -3, 77, 0, 36]
-    assert listmax(list1) == 99
-    assert listmax(list2) == -3
-    assert listmax(list3) == 425
+
+def test_guess_incorrect(monkeypatch):
+    monkeypatch.setattr("random.randint", lambda a, b: 3)
+    assert guess_the_number(7) == "Sorry, the number was 3"

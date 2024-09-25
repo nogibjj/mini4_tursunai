@@ -1,10 +1,14 @@
-def listmax(list_max):
-    """Function returning max of list"""
-    if not list_max:
-        return None
-    max_num = -999999999999
-    for i in list_max:
-        if i > max_num:
-            max_num = i
+import random
 
-    return max_num
+
+def guess_the_number(guess):
+    number = random.randint(1, 10)
+    if guess == number:
+        return "You guessed it!"
+    else:
+        return f"Sorry, the number was {number}"
+
+
+if __name__ == "__main__":
+    user_guess = int(input("Guess a number between 1 and 10: "))
+    print(guess_the_number(user_guess))
