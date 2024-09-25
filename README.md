@@ -14,9 +14,11 @@ The project includes a GitHub Actions configuration that runs tests and formats 
 ### Steps:
 1. **Install dependencies**: Runs `make install`
 2. **Lint the code**: Runs `make lint` 
-![Lint Screenshot](lint.png)
+   <img src="lint.png" alt="Lint Screenshot" width="400"/>
+
 3. **Run tests**: Executes `pytest` on various Python versions
-![Test Screenshot](test.png)
+   <img src="test.png" alt="Test Screenshot" width="400"/>
+
 4. **Format code**: Ensures code is formatted with `black`
 
 ### Workflow Configuration:
@@ -27,7 +29,7 @@ The matrix build runs on the following configurations:
 ## Example of CI Run:
 Here is a screenshot of a successful workflow execution:
 
-![Workflow Execution Screenshot](jobs.png)
+<img src="jobs.png" alt="Workflow Execution Screenshot" width="400"/>
 
 ## Installation and Usage
 
