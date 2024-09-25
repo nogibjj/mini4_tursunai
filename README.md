@@ -13,8 +13,10 @@ The project includes a GitHub Actions configuration that runs tests and formats 
 
 ### Steps:
 1. **Install dependencies**: Runs `make install`
-2. **Lint the code**: Runs `make lint`
+2. **Lint the code**: Runs `make lint` 
+![Lint Screenshot](lint.png)
 3. **Run tests**: Executes `pytest` on various Python versions
+![Test Screenshot](test.png)
 4. **Format code**: Ensures code is formatted with `black`
 
 ### Workflow Configuration:
